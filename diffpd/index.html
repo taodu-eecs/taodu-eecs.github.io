@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tao Du</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+h1{
+    font-weight: bold;
+}
+pre {
+    height: auto;
+    overflow: auto;
+    background-color: #f6f8fa;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap !important;
+}
+a.black {
+    color: black
+}
+a.black_underline {
+    color: black;
+    text-decoration-line: underline
+}
+p.bold {
+    font-weight: bold
+}
+p.bold_and_large {
+    font-weight: bold;
+    font-size: large
+}
+p.bold_and_italic {
+    font-weight: bold;
+    font-style: italic
+}
+a.footer {
+    color: black;
+    font-style: italic
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Some color reference: gray: #f7f7f7; cardinal: #c41e3a -->
+
+<!-- Main page -->
+<div class="container pt-5">
+    <!-- Title -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h1>DiffPD: Differentiable Projective Dynamics</h1>
+        </div>
+    </div>
+    <!-- Authors -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h5>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://people.csail.mit.edu/kuiwu/" class="black">Kui Wu</a>,
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="http://www.andrewspielberg.com/" class="black">Andrew Spielberg</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </h5>
+        </div>
+    </div>
+    <!-- Teaser -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <img src="../image/diff_pd.png" width="50%">
+        </div>
+    </div>
+    <!-- Abstract -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Abstract</h2>
+            <p>
+                We present a novel, fast differentiable simulator for soft-body learning and control applications.
+                Existing differentiable soft-body simulators can be classified into two categories based on their time integration methods:
+                Simulators using explicit timestepping schemes require tiny timesteps to avoid numerical instabilities in gradient computation,
+                and simulators using implicit time integration typically compute gradients by employing the adjoint method and solving the expensive linearized dynamics.
+                Inspired by Projective Dynamics (PD), we present Differentiable Projective Dynamics (DiffPD),
+                an efficient differentiable soft-body simulator based on PD with implicit time integration.
+                The key idea in DiffPD is to speed up backpropagation by exploiting the prefactorized Cholesky decomposition in forward PD simulation.
+                In terms of contact handling, DiffPD supports two types of contacts:
+                a penalty-based model describing contact and friction forces and a complementarity-based model enforcing non-penetration conditions and static friction.
+                We evaluate the performance of DiffPD and observe it is 4–19 times faster compared with the standard Newton’s method in various applications
+                including system identification, inverse design problems, trajectory optimization, and closed-loop control.
+                We also apply DiffPD in a reality-to-simulation (real-to-sim) example with contact and collisions
+                and show its capability of reconstructing a digital twin of real-world scenes.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Video -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Video</h2>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DdNHmkzdWZE" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <hr>
+
+    <!-- Ack -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Acknowledgments</h2>
+            <p>
+                We thank Desai Chen, David I.W. Levin, Bo Zhu, and Eftychios
+                Sifakis for their feedback and suggestions on this paper. The duck
+                and cow mesh models in Figs. 5, 6, and 14 are obtained from Keenan
+                Crane's 3D model repository under the CC0 1.0 Universal license.
+                This work is sponsored by Defense Advanced Research Projects
+                Agency (DARPA) under grant No. FA8750-20-C-0075, Intelligence
+                Advanced Research Projects Activity (IARPA) under grant 2019-
+                19020100001, and National Science Foundation (NSF) Award 2106962:
+                Computational Design of Complex Fluidic Systems.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Paper and Code -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Paper and Code</h2>
+            <div><b>DiffPD: Differentiable Projective Dynamics</b></div>
+            <div>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://people.csail.mit.edu/kuiwu/" class="black">Kui Wu</a>,
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="http://www.andrewspielberg.com/" class="black">Andrew Spielberg</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </div>
+            <div><i>ACM Transactions on Graphics 2022 (SIGGRAPH 2022)</i></div>
+            <div>
+                <a href="https://dl.acm.org/doi/full/10.1145/3490168" class="black_underline">[Paper]</a>
+                <a href="https://github.com/mit-gfx/diff_pd_public" class="black_underline">[Code]</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibtex -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Citation</h2>
+            <pre>
+@article{du2021_diffpd,
+    author = {Du, Tao and Wu, Kui and Ma, Pingchuan and Wah, Sebastien and Spielberg, Andrew and Rus, Daniela and Matusik, Wojciech},
+    title = {DiffPD: Differentiable Projective Dynamics},
+    year = {2021},
+    issue_date = {April 2022},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {41},
+    number = {2},
+    issn = {0730-0301},
+    url = {https://doi.org/10.1145/3490168},
+    doi = {10.1145/3490168},
+    journal = {ACM Trans. Graph.},
+    month = {nov},
+    articleno = {13},
+    numpages = {21},
+    keywords = {differentiable simulation, Projective dynamics}
+}
+            </pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <div class="row pt-0">
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://www.mit.edu" class=footer>Massachusetts Institute of Technology</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://csail.mit.edu" class=footer>Computer Science and Artificial Intelligence Laboratory</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="float-right">
+                <a href="https://accessibility.mit.edu/" class=footer>Accessibility</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+
+</body>
+</html>

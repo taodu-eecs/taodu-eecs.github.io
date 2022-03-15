@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tao Du</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+h1{
+    font-weight: bold;
+}
+pre {
+    height: auto;
+    overflow: auto;
+    background-color: #f6f8fa;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap !important;
+}
+a.black {
+    color: black
+}
+a.black_underline {
+    color: black;
+    text-decoration-line: underline
+}
+p.bold {
+    font-weight: bold
+}
+p.bold_and_large {
+    font-weight: bold;
+    font-size: large
+}
+p.bold_and_italic {
+    font-weight: bold;
+    font-style: italic
+}
+a.footer {
+    color: black;
+    font-style: italic
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Some color reference: gray: #f7f7f7; cardinal: #c41e3a -->
+<!-- Navigation bar -->
+<!-- TODO -->
+
+<!-- Main page -->
+<div class="container pt-5">
+    <!-- Title -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h1>Computational Multicopter Design</h1>
+        </div>
+    </div>
+    <!-- Authors -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h5>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="https://www.dartmouth.edu/~boolzhu/" class="black">Bo Zhu</a>,
+                <a href="http://berndbickel.com/about-me/" class="black">Bernd Bickel</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </h5>
+        </div>
+    </div>
+    <!-- Teaser -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <img src="teaser.jpg" width="100%">
+        </div>
+    </div>
+    <!-- Abstract -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Abstract</h2>
+            <p>
+                We present an interactive system for computational design, optimization, and fabrication of multicopters.
+                Our computational approach allows non-experts to design, explore, and evaluate a wide range of different multicopters.
+                We provide users with an intuitive interface for assembling a multicopter from a collection of components
+                (e.g., propellers, motors, and carbon fiber rods).
+                Our algorithm interactively optimizes shape and controller parameters of the current design to ensure its proper operation.
+                In addition, we allow incorporating a variety of other metrics (such as payload, battery usage, size, and cost)
+                into the design process and exploring tradeoffs between them.
+                We show the efficacy of our method and system by designing, optimizing, fabricating, and operating multicopters
+                with complex geometries and propeller configurations.
+                We also demonstrate the ability of our optimization algorithm to improve the multicopter performance under different metrics.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Video -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Video</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GC8fv7kd9mM" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/voS8dIxYKy8" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Paper and Code -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Paper and Code</h2>
+            <div><b>Computational Multicopter Design</b></div>
+            <div>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="https://www.dartmouth.edu/~boolzhu/" class="black">Bo Zhu</a>,
+                <a href="http://berndbickel.com/about-me/" class="black">Bernd Bickel</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </div>
+            <div><i>(ACM Transactions on Graphics 2016 (SIGGRAPH Asia 2016)</i></div>
+            <div>
+                <a href="https://dl.acm.org/doi/10.1145/2980179.2982427" class="black_underline">[Paper]</a>
+                <a href="https://github.com/mit-gfx/multicopter_design" class="black_underline">[Code (design)]</a>
+                <a href="https://github.com/dut09/ardupilot/tree/holodeck-demo" class="black_underline">[Code (control)]</a>
+                <a href="https://cad.onshape.com/documents/829cfef861a7d873d7f403de/w/2d807cb313793dabb7bfbee6/e/658cd3f46b668b90be89e8e8" class="black_underline">[Hardware]</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibtex -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Citation</h2>
+            <pre style="background-color: #f6f8fa;">
+@article{du2016_copter,
+    author = {Du, Tao and Schulz, Adriana and Zhu, Bo and Bickel, Bernd and Matusik, Wojciech},
+    title = {Computational Multicopter Design},
+    year = {2016},
+    issue_date = {November 2016},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {35},
+    number = {6},
+    issn = {0730-0301},
+    url = {https://doi.org/10.1145/2980179.2982427},
+    doi = {10.1145/2980179.2982427},
+    journal = {ACM Trans. Graph.},
+    month = {nov},
+    articleno = {227},
+    numpages = {10},
+    keywords = {optimization, fabrication, parametric modeling}
+}
+            </pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <div class="row pt-0">
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://www.mit.edu" class=footer>Massachusetts Institute of Technology</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://csail.mit.edu" class=footer>Computer Science and Artificial Intelligence Laboratory</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="float-right">
+                <a href="https://accessibility.mit.edu/" class=footer>Accessibility</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+
+</body>
+</html>

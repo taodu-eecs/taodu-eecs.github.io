@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tao Du</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+h1{
+    font-weight: bold;
+}
+pre {
+    height: auto;
+    overflow: auto;
+    background-color: #f6f8fa;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap !important;
+}
+a.black {
+    color: black
+}
+a.black_underline {
+    color: black;
+    text-decoration-line: underline
+}
+p.bold {
+    font-weight: bold
+}
+p.bold_and_large {
+    font-weight: bold;
+    font-size: large
+}
+p.bold_and_italic {
+    font-weight: bold;
+    font-style: italic
+}
+a.footer {
+    color: black;
+    font-style: italic
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Some color reference: gray: #f7f7f7; cardinal: #c41e3a -->
+
+<!-- Main page -->
+<div class="container pt-5">
+    <!-- Title -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h1>Underwater Soft Robot Modeling and Control with Differentiable Simulation</h1>
+        </div>
+    </div>
+    <!-- Authors -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h5>
+                <a href="../index.html" class="black">Tao Du</a>*,
+                <a href="https://scholar.google.com/citations?user=CXfveikAAAAJ&hl=en" class="black">Josie Hughes</a>*,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>
+            </h5>
+        </div>
+    </div>
+    <!-- Teaser -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <img src="teaser.jpg" width="100%">
+        </div>
+    </div>
+    <!-- Abstract -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Abstract</h2>
+            <p>
+                Underwater soft robots are challenging to model and control because of their high degrees of freedom and their intricate coupling with water.
+                In this paper, we present a method that leverages the recent development in differentiable simulation coupled with a differentiable,
+                analytical hydrodynamic model to assist with the modeling and control of an underwater soft robot.
+                We apply this method to Starfish, a customized soft robot design that is easy to fabricate and intuitive to manipulate.
+                Our method starts with data obtained from the real robot and alternates between simulation and experiments.
+                Specifically, the simulation step uses gradients from a differentiable simulator to run system identification and trajectory optimization,
+                and the experiment step executes the optimized trajectory on the robot to collect new data to be fed into simulation.
+                Our demonstration on Starfish shows that proper usage of gradients from a differentiable simulator not only narrows down its simulation-to-reality gap
+                but also improves the performance of an open-loop controller in real experiments.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Video -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Video</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Kh3TOftm8jg" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Paper and Code -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Paper and Code</h2>
+            <div><b>Underwater Soft Robot Modeling and Control with Differentiable Simulation</b></div>
+            <div>
+                <a href="../index.html" class="black">Tao Du</a>*,
+                <a href="https://scholar.google.com/citations?user=CXfveikAAAAJ&hl=en" class="black">Josie Hughes</a>*,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>
+            </div>
+            <div><i>IEEE Robotics and Automation Letters 2021 (RoboSoft 2021)</i></div>
+            <div>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392257" class="black_underline">[Paper]</a>
+                <a href="https://github.com/dut09/diff_pd" class="black_underline">[Code]</a>
+                <a href="poster.pdf" class="black_underline">[Poster]</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibtex -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Citation</h2>
+            <pre style="background-color: #f6f8fa;">
+@ARTICLE{du2021_starfish,
+    author={Du, Tao and Hughes, Josie and Wah, Sebastien and Matusik, Wojciech and Rus, Daniela},
+    journal={IEEE Robotics and Automation Letters}, 
+    title={Underwater Soft Robot Modeling and Control With Differentiable Simulation}, 
+    year={2021},
+    volume={6},
+    number={3},
+    pages={4994-5001},
+    doi={10.1109/LRA.2021.3070305}
+}
+            </pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <div class="row pt-0">
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://www.mit.edu" class=footer>Massachusetts Institute of Technology</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://csail.mit.edu" class=footer>Computer Science and Artificial Intelligence Laboratory</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="float-right">
+                <a href="https://accessibility.mit.edu/" class=footer>Accessibility</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+
+</body>
+</html>

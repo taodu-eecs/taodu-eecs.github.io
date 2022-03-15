@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tao Du</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+a.black {
+   color: black
+}
+a.black_underline {
+    color: black;
+    text-decoration-line: underline
+}
+p.bold {
+    font-weight: bold
+}
+p.bold_and_large {
+    font-weight: bold;
+    font-size: large
+}
+p.bold_and_italic {
+    font-weight: bold;
+    font-style: italic
+}
+a.footer {
+    color: black;
+    font-style: italic
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Some color reference: gray: #f7f7f7; cardinal: #c41e3a -->
+<!-- Navigation bar -->
+<!-- TODO -->
+
+<!-- Main page -->
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="image/portrait.jpg" alt="portrait" width="100%">
+        </div>
+        <div class="col-md-9">
+            <h1>Tao Du</h1>
+            <div>Postdoctoral Associate</div>
+            <div><a href="https://cdfg.mit.edu/" class="black">Computational Design and Fabrication Group</a></div>
+            <div><a href="http://danielarus.csail.mit.edu/" class="black">Distributed Robotics Laboratory</a></div>
+            <div><a href="https://csail.mit.edu" class="black">Computer Science and Artificial Intelligence Laboratory</a></div>
+            <div><a href="https://www.mit.edu" class="black">Massachusetts Institute of Technology</a></div>
+            <div>Email: taodu at csail dot mit dot edu |
+                <a href="https://scholar.google.com/citations?hl=en&user=HPw27CYAAAAJ" class="black">Google Scholar</a> |
+                <a href="https://openreview.net/profile?id=~Tao_Du1" class="black">OpenReview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About me -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h3>About Me</h3>
+            <div>
+                <p>
+                    I am a Postdoctoral Associate at <a href="https://csail.mit.edu" class="black">MIT CSAIL</a> advised by <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a> 
+                    and <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>.
+                    I obtained my Ph.D. in Computer Science from <a href="https://www.eecs.mit.edu/" class="black">MIT</a> in 2021 under the supervision of <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                    Before coming to MIT, I received my Master's in Computer Science from <a href="https://cs.stanford.edu/" class="black">Stanford University</a> in 2015 and
+                    my Bachelor's in Computer Software from <a href="https://www.thss.tsinghua.edu.cn/en/" class="black">Tsinghua University</a> in 2013.
+                </p>
+                <p>
+                    My research combines physics simulation, machine learning, and numerical optimization techniques to solve real-world inverse dynamics problems.
+                    Some of my recent research topics are <a href="diffpd/index.html" class="black">building differentiable simulation platforms</a> for graphics and robotics research,
+                    <a href="copter/index.html" class="black">developing computational design pipelines</a> for real-world robots,
+                    and <a href="https://sites.google.com/view/risp-iclr-2022/home" class="black">understanding simulation-to-reality transfer</a> of dynamic systems.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research interests -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>Research Topics</h3>
+            <div>
+                <p>
+                    <b>Computer graphics</b>:
+                        computational design,
+                        differentiable simulation
+                    <br>
+                    <b>Machine learning</b>:
+                        differentiable physics,
+                        learning for dynamics and control,
+                        sim-to-real transfer
+                    <br>
+                    <b>Robotics</b>:
+                        aerial robots,
+                        soft robots,
+                        inverse dynamics
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>News</h3>
+            <div>
+                <p>
+                    <b>01/2022</b>: Two papers (one oral and one spotlight) are accepted to ICLR 2022.<br>
+                    <b>10/2021</b>: I was selected to receive a
+                    <a href="https://nips.cc/Conferences/2021/ProgramCommittee" class="black">NeurIPS 2021 Outstanding Reviewer Award</a>
+                    (top 8% of reviewers).<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Publications -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>Publications</h3>
+            <p>(* indicates equal contributions)</p>
+        </div>
+    </div>
+
+    <!-- DiffCloth -->
+    <div class="row">
+        <div class="col-md-3">
+            <img src="image/diffcloth.gif" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact</p>
+            <p>
+                <a href="https://omegaiota.github.io/" class="black">Yifei Li</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://people.csail.mit.edu/kuiwu/" class="black">Kui Wu</a>,
+                <a href="https://people.csail.mit.edu/jiex" class="black">Jie Xu</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2022 (minor revisions)</a>
+            </p>
+            <p>
+                <a href="https://arxiv.org/abs/2106.05306" class="black_underline">[arXiv]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- RISP -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/risp.gif" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">RISP: Rendering-Invariant State Predictor with Differentiable Simulation and Rendering for Cross-Domain Parameter Estimation</p>
+            <p>
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>*,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>*,
+                <a href="http://web.mit.edu/cocosci/josh.html" class="black">Joshua B. Tenenbaum</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>,
+                <a href="https://people.csail.mit.edu/ganchuang/" class="black">Chuang Gan</a>.
+                <a style="font-style: italic">ICLR 2022</a>
+                <a style="font-weight: bold;font-style: italic;">(Oral)</a>
+            </p>
+            <p>
+                <a href="https://sites.google.com/view/risp-iclr-2022/home" class="black_underline">[Project]</a>
+                <a href="https://openreview.net/forum?id=uSE03demja" class="black_underline">[Paper]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- CPDeform -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/cpdeform.webp" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Contact Points Discovery for Soft-Body Manipulations with Differentiable Physics</p>
+            <p>
+                <a href="https://lester0866.github.io/" class="black">Sizhe Li</a>*,
+                <a href="https://sites.google.com/view/zhiao-huang" class="black">Zhiao Huang</a>*,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://cseweb.ucsd.edu/~haosu/" class="black">Hao Su</a>,
+                <a href="http://web.mit.edu/cocosci/josh.html" class="black">Joshua B. Tenenbaum</a>,
+                <a href="https://people.csail.mit.edu/ganchuang/" class="black">Chuang Gan</a>.
+                <a style="font-style: italic">ICLR 2022</a>
+                <a style="font-weight: bold;font-style: italic;">(Spotlight)</a>
+            </p>
+            <p>
+                <a href="https://sites.google.com/view/cpdeformiclr2022" class="black_underline">[Project]</a>
+                <a href="https://openreview.net/forum?id=mmUA7_O9mjY" class="black_underline">[Paper]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- DiffPD -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/diff_pd.png" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">DiffPD: Differentiable Projective Dynamics</p>
+            <p>
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://people.csail.mit.edu/kuiwu/" class="black">Kui Wu</a>,
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="http://www.andrewspielberg.com/" class="black">Andrew Spielberg</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2022 (SIGGRAPH 2022)</a>
+            </p>
+            <p>
+                <a href="diffpd/index.html" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/full/10.1145/3490168" class="black_underline">[Paper]</a>
+                <a href="https://arxiv.org/abs/2101.05917" class="black_underline">[arXiv]</a>
+                <a href="https://github.com/mit-gfx/diff_pd_public" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- VRDP -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/vrdp.gif" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Dynamic Visual Reasoning by Learning Differentiable Physics Models from Video and Language</p>
+            <p>
+                <a href="https://dingmyu.github.io/" class="black">Mingyu Ding</a>,
+                <a href="https://zfchenunique.github.io/" class="black">Zhenfang Chen</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="http://luoping.me/" class="black">Ping Luo</a>,
+                <a href="http://web.mit.edu/cocosci/josh.html" class="black">Joshua B. Tenenbaum</a>,
+                <a href="https://people.csail.mit.edu/ganchuang/" class="black">Chuang Gan</a>.
+                <a style="font-style: italic">NeurIPS 2021</a>
+            </p>
+            <p>
+                <a href="http://vrdp.csail.mit.edu/" class="black_underline">[Project]</a>
+                <a href="https://proceedings.neurips.cc/paper/2021/hash/07845cd9aefa6cde3f8926d25138a3a2-Abstract.html" class="black_underline">[Paper]</a>
+                <a href="https://github.com/dingmyu/VRDP" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Robotica -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/robotica.png" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Advanced Soft Robot Modeling in ChainQueen</p>
+            <p>
+                <a href="http://www.andrewspielberg.com/" class="black">Andrew Spielberg</a>,
+                <a href="index.html" class="black_underline">Tao Du</a>,
+                <a href="https://yuanming.taichi.graphics/" class="black">Yuanming Hu</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">Robotica 2021</a>
+            </p>
+            <p>
+                <a href="https://www.cambridge.org/core/journals/robotica/article/advanced-soft-robot-modeling-in-chainqueen/FACC977AC73D95935AB7122362C3CB70" class="black" style="text-decoration-line: underline">[Paper]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Fusion 360 -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/fusion_360.png" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Fusion 360 Gallery: A Dataset and Environment for Programmatic CAD Reconstruction</p>
+            <p>
+                <a href="https://www.karlddwillis.com/" class="black">Karl D.D. Willis</a>,
+                <a href="https://evanthebouncy.github.io/" class="black">Yewen Pu</a>,
+                <a href="https://www.autodesk.com/research/people/rodger-luo" class="black">Jieliang Luo</a>,
+                <a href="https://chuhang.github.io/" class="black">Hang Chu</a>,
+                <a href="index.html" class="black_underline">Tao Du</a>,
+                <a href="https://www.autodesk.com/research/people/joseph-lambourne" class="black">Joseph G. Lambourne</a>,
+                <a href="https://people.csail.mit.edu/asolar/" class="black">Armando Solar-Lezama</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2021 (SIGGRAPH 2021)</a>
+            </p>
+            <p>
+                <a href="https://dl.acm.org/doi/10.1145/3450626.3459818" class="black_underline">[Paper]</a>
+                <a href="https://arxiv.org/pdf/2010.02392.pdf" class="black_underline">[arXiv]</a>
+                <a href="https://github.com/AutodeskAILab/Fusion360GalleryDataset" class="black" style="text-decoration-line: underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- DiffAqua -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/diffaqua.png" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">DiffAqua: A Differentiable Computational Design Pipeline for Soft Underwater Swimmers with Shape Interpolation</p>
+            <p>
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="http://bnc.mit.edu/" class="black">John Z. Zhang</a>,
+                <a href="https://people.csail.mit.edu/kuiwu/" class="black">Kui Wu</a>,
+                <a href="http://www.andrewspielberg.com/" class="black">Andrew Spielberg</a>,
+                <a href="https://robert.katzschmann.eu/" class="black">Robert K. Katzschmann</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2021 (SIGGRAPH 2021)</a>
+            </p>
+            <p>
+                <a href="http://diffaqua.csail.mit.edu/" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/10.1145/3450626.3459832" class="black_underline">[Paper]</a>
+                <a href="https://arxiv.org/pdf/2104.00837.pdf" class="black_underline">[arXiv]</a>
+                <a href="https://github.com/mit-gfx/DiffAqua" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Starfish -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/starfish.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Underwater Soft Robot Modeling and Control with Differentiable Simulation</p>
+            <p>
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>*,
+                <a href="https://scholar.google.com/citations?user=CXfveikAAAAJ&hl=en" class="black">Josie Hughes</a>*,
+                <a href="https://www.linkedin.com/in/sebastien-wah-330904a3" class="black">Sebastien Wah</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>.
+                <a style="font-style: italic">IEEE Robotics and Automation Letters 2021 (RoboSoft 2021)</a>
+            </p>
+            <p>
+                <a href="starfish/index.html" class="black_underline">[Project]</a>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392257" class="black_underline">[Paper]</a>
+                <a href="https://github.com/dut09/diff_pd" class="black_underline">[Code]</a>
+                <a href="starfish/poster.pdf" class="black_underline">[Poster]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- PlasticineLab -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/plasticine.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">PlasticineLab: A Soft-Body Manipulation Benchmark with Differentiable Physics</p>
+            <p>
+                <a href="https://sites.google.com/view/zhiao-huang" class="black">Zhiao Huang</a>,
+                <a href="https://yuanming.taichi.graphics/" class="black">Yuanming Hu</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                Siyuan Zhou,
+                <a href="https://cseweb.ucsd.edu/~haosu/" class="black">Hao Su</a>,
+                <a href="http://web.mit.edu/cocosci/josh.html" class="black">Joshua B. Tenenbaum</a>,
+                <a href="https://people.csail.mit.edu/ganchuang/" class="black">Chuang Gan</a>.
+                <a style="font-style: italic">ICLR 2021</a>
+                <a style="font-weight: bold;font-style: italic;">(Spotlight)</a>
+            </p>
+            <p>
+                <a href="http://plasticinelab.csail.mit.edu/" class="black_underline">[Project]</a>
+                <a href="https://openreview.net/pdf?id=xCcdBRQEDW" class="black_underline">[Paper]</a>
+                <a href="https://github.com/hzaskywalker/PlasticineLab" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Stokes -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/stokes.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Functional Optimization of Fluidic Devices with Differentiable Stokes Flow</p>
+            <p>
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://people.csail.mit.edu/kuiwu" class="black">Kui Wu</a>,
+                <a href="http://www.andrewspielberg.com" class="black">Andrew Spielberg</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>,
+                <a href="https://www.dartmouth.edu/~boolzhu" class="black">Bo Zhu</a>,
+                <a href="http://pages.cs.wisc.edu/~sifakis" class="black">Eftychios Sifakis</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2020 (SIGGRAPH Asia 2020)</a>
+            </p>
+            <p>
+                <a href="stokes/index.html" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3414685.3417795" class="black_underline">[Paper]</a>
+                <a href="https://github.com/mit-gfx/diff_stokes_flow" class="black_underline">[Code]</a>
+                <a href="stokes/slides.pdf" class="black_underline">[Slides]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- CPMTL -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/cpmtl.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Efficient Continuous Pareto Exploration in Multi-Task Learning</p>
+            <p>
+                <a href="https://pingchuan.ma/" class="black">Pingchuan Ma</a>*,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>*,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ICML 2020</a>
+            </p>
+            <p>
+                <a href="http://cpmtl.csail.mit.edu/" class="black_underline">[Project]</a>
+                <a href="https://proceedings.mlr.press/v119/ma20a.html" class="black_underline">[Paper]</a>
+                <a href="https://arxiv.org/pdf/2006.16434.pdf" class="black_underline">[arXiv]</a>
+                <a href="https://github.com/mit-gfx/ContinuousParetoMTL" class="black_underline">[Code]</a>
+                <a href="https://icml.cc/virtual/2020/poster/5856" class="black_underline">[Talk]</a>
+                <a href="http://cpmtl.csail.mit.edu/data/slides.pdf" class="black_underline">[Slides]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Learning-in-the-loop -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/litl.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Learning-in-the-Loop Optimization: End-to-End Control and Co-Design of Soft Robots through Learned Deep Latent Representations</p>
+            <p>
+                <a href="http://www.andrewspielberg.com" class="black">Andrew Spielberg</a>,
+                <a href="https://github.com/allanzhao" class="black">Allan Zhao</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://yuanming.taichi.graphics/" class="black">Yuanming Hu</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">NeurIPS 2019</a>
+            </p>
+            <p>
+                <a href="https://proceedings.neurips.cc/paper/2019/hash/438124b4c06f3a5caffab2c07863b617-Abstract.html" class="black_underline">[Paper]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Learning to fly -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/l2f.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Learning to Fly: Computational Controller Design for Hybrid UAVs with Reinforcement Learning</p>
+            <p>
+                <a href="https://people.csail.mit.edu/jiex" class="black">Jie Xu</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://www.linkedin.com/pub/michael-foshey/4b/176/108" class="black">Michael Foshey</a>,
+                <a href="https://scholar.google.com/citations?user=zR5wuKUAAAAJ&hl=en" class="black">Beichen Li</a>,
+                <a href="https://www.dartmouth.edu/~boolzhu/" class="black">Bo Zhu</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2019 (SIGGRAPH 2019)</a>
+            </p>
+            <p>
+                <a href="https://people.csail.mit.edu/jiex/papers/LearningToFly/index.html" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/10.1145/3306346.3322940" class="black_underline">[Paper]</a>
+                <a href="https://github.com/eanswer/LearningToFly" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- CSG -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/csg.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">InverseCSG: Automatic Conversion of 3D Models to CSG Trees</p>
+            <p>
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://jinala.github.io/" class="black">Jeevana Priya Inala</a>,
+                <a href="https://evanthebouncy.github.io/" class="black">Yewen Pu</a>,
+                <a href="http://www.andrewspielberg.com" class="black">Andrew Spielberg</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://people.csail.mit.edu/asolar/" class="black">Armando Solar-Lezama</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2018 (SIGGRAPH Asia 2018)</a>
+            </p>
+            <p>
+                <a href="csg/index.html" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/10.1145/3272127.3275006" class="black_underline">[Paper]</a>
+                <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3272127.3275006&file=a213-du.zip&download=true" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Copter -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/copter.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Computational Multicopter Design</p>
+            <p>
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="https://www.dartmouth.edu/~boolzhu/" class="black">Bo Zhu</a>,
+                <a href="http://berndbickel.com/about-me/" class="black">Bernd Bickel</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2016 (SIGGRAPH Asia 2016)</a>
+            </p>
+            <p>
+                <a href="copter/index.html" class="black_underline">[Project]</a>
+                <a href="https://dl.acm.org/doi/10.1145/2980179.2982427" class="black_underline">[Paper]</a>
+                <a href="https://github.com/mit-gfx/multicopter_design" class="black_underline">[Code (design)]</a>
+                <a href="https://github.com/dut09/ardupilot/tree/holodeck-demo" class="black_underline">[Code (control)]</a>
+                <a href="https://cad.onshape.com/documents/829cfef861a7d873d7f403de/w/2d807cb313793dabb7bfbee6/e/658cd3f46b668b90be89e8e8" class="black_underline">[Hardware]</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- EMD -->
+    <div class="row pt-4">
+        <div class="col-md-3">
+            <img src="image/emd.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Convolutional Wasserstein Distances: Efficient Optimal Transportation on Geometric Domains</p>
+            <p>
+                <a href="https://people.csail.mit.edu/jsolomon" class="black">Justin Solomon</a>,
+                <a href="http://fernandodegoes.org/" class="black">Fernando de Goes</a>,
+                <a href="http://www.gpeyre.com/" class="black">Gabriel Peyré</a>,
+                <a href="https://marcocuturi.net/" class="black">Marco Cuturi</a>,
+                <a href="https://www.autodesk.com/research/people/adrian-butscher" class="black">Adrian Butscher</a>,
+                <a href="https://geometry.stanford.edu/person.php?id=tanonev" class="black">Andy Nguyen</a>,
+                <a href="index.html" class="black" style="text-decoration-line: underline">Tao Du</a>,
+                <a href="https://geometry.stanford.edu/member/guibas/" class="black">Leonidas Guibas</a>.
+                <a style="font-style: italic">ACM Transactions on Graphics 2015 (SIGGRAPH 2015)</a>
+            </p>
+            <p>
+                <a href="https://dl.acm.org/doi/10.1145/2766963" class="black_underline">[Paper]</a>
+                <a href="https://github.com/gpeyre/2015-SIGGRAPH-convolutional-ot" class="black_underline">[Code]</a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Talks -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>Talks</h3>
+        </div>
+    </div>
+    <!-- Diff sim -->
+    <div class="row pt-3">
+        <div class="col-md-3">
+            <img src="image/diff_sim_for_robot_design.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">Differentiable Simulation Methods for Robotic Agent Design</p>
+            <p style="font-style: italic">A seminar talk summarizing our thoughts on differentiable simulators and their applications in real-world robotic problems.</p>
+            <p>
+                <a href="https://www.youtube.com/watch?v=lSAxE2W4Sio" class="black_underline">[Video (Boston University)]</a>
+                <a href="https://www.youtube.com/watch?v=bk9UFcHuIf0" class="black_underline">[Video (CompFab Seminar)]</a>
+                <a href="https://youtu.be/JXt8FY59luY" class="black_underline">[Video (thesis defense)]</a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Press -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>Press</h3>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-3">
+            <a href="https://www.wired.com/2017/04/nifty-mit-software-lets-design-test-drone/">
+                <img class="mx-auto d-block" src="image/wired.svg" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://news.mit.edu/2016/design-your-own-custom-drone-1205">
+                <img class="mx-auto d-block" src="image/mit_news.png" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://techcrunch.com/2019/01/04/engineers-can-now-reverse-engineer-3d-models/">
+                <img class="mx-auto d-block" src="image/techcrunch.png" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.engadget.com/2019-07-16-mit-is-testing-drones-that-can-switch-between-hovering-and-glid.html">
+                <img class="mx-auto d-block" src="image/engadget.svg" width="100%">
+            </a>
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <div class="col-md-3">
+            <a href="https://www.youtube.com/watch?v=sTKkqebX7Ko">
+                <img class="mx-auto d-block" src="image/mashable.png" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://finance.yahoo.com/news/mit-researchers-develop-system-lets-151109452.html">
+                <img class="mx-auto d-block" src="image/yahoo_finance.jpg" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="http://spectrum.ieee.org/automaton/robotics/robotics-hardware/video-friday-cybathlon-mit-drones-kuka-3d-printed-buildings">
+                <img class="mx-auto d-block" src="image/ieee_spectrum.png" width="100%">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.tctmagazine.com/tctblogs/guest-blogs/customising-computer-aided-design-program-synthesis/">
+                <img class="mx-auto d-block" src="image/tct.jpg" width="33%">
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Miscellaneous -->
+    <div class="row pt-2">
+        <div class="col-md-12">
+            <h3>Miscellaneous</h3>
+        </div>
+    </div>
+    <!-- Pentacopter -->
+    <div class="row pt-3">
+        <div class="col-md-3">
+            <img src="image/pentacopter.jpg" width="100%">
+        </div>
+        <div class="col-md-9">
+            <p class="bold_and_large">A Practical Guide to Building a Pentacopter</p>
+            <p style="font-style: italic">A step-by-step document that explains how to design, simulate, control, and build a pentacopter for drone hobbyists.</p>
+            <p>
+                <a href="pentacopter/design.pdf" class="black_underline">[Document (design)]</a>
+                <a href="pentacopter/control.pdf" class="black_underline">[Document (control)]</a>
+                <a href="https://www.youtube.com/watch?v=voS8dIxYKy8&feature=youtu.be" class="black_underline">[Video]</a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <div class="row pt-0">
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://www.mit.edu" class=footer>Massachusetts Institute of Technology</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://csail.mit.edu" class=footer>Computer Science and Artificial Intelligence Laboratory</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="float-right">
+                <a href="https://accessibility.mit.edu/" class=footer>Accessibility</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+</body>
+</html>

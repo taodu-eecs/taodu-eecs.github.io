@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tao Du</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+h1{
+    font-weight: bold;
+}
+pre {
+    height: auto;
+    overflow: auto;
+    background-color: #f6f8fa;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap !important;
+}
+a.black {
+    color: black
+}
+a.black_underline {
+    color: black;
+    text-decoration-line: underline
+}
+p.bold {
+    font-weight: bold
+}
+p.bold_and_large {
+    font-weight: bold;
+    font-size: large
+}
+p.bold_and_italic {
+    font-weight: bold;
+    font-style: italic
+}
+a.footer {
+    color: black;
+    font-style: italic
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Some color reference: gray: #f7f7f7; cardinal: #c41e3a -->
+
+<!-- Main page -->
+<div class="container pt-5">
+    <!-- Title -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h1>InverseCSG: Automatic Conversion of 3D Models to CSG Trees</h1>
+        </div>
+    </div>
+    <!-- Authors -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <h5>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://jinala.github.io/" class="black">Jeevana Priya Inala</a>,
+                <a href="https://evanthebouncy.github.io/" class="black">Yewen Pu</a>,
+                <a href="http://www.andrewspielberg.com" class="black">Andrew Spielberg</a>,
+            </h5>
+            <h5>
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://people.csail.mit.edu/asolar/" class="black">Armando Solar-Lezama</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </h5>
+        </div>
+    </div>
+    <!-- Teaser -->
+    <div class="row pt-4">
+        <div class="col-md-12" style="text-align: center;">
+            <img src="teaser.jpg" width="100%">
+        </div>
+    </div>
+    <!-- Abstract -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Abstract</h2>
+            <p>
+                While computer-aided design is a major part of many modern manufacturing pipelines,
+                the design files typically generated describe raw geometry.
+                Lost in this representation is the procedure by which these designs were generated.
+                In this paper, we present a method for reverse-engineering the process by which 3D models may have been generated,
+                in the language of constructive solid geometry (CSG).
+                Observing that CSG is a formal grammar, we formulate this inverse CSG problem as a program synthesis problem.
+                Our solution is an algorithm that couples geometric processing with state-ofthe-art program synthesis techniques.
+                In this scheme, geometric processing is used to convert the mixed discrete and continuous domain of CSG trees
+                to a pure discrete domain where modern program synthesizers excel.
+                We demonstrate the efficiency and scalability of our algorithm on several different examples,
+                including those with over 100 primitive parts.
+                We show that our algorithm is able to find simple programs which are close to the ground truth,
+                and demonstrate our method's applicability in mesh re-editing.
+                Finally, we compare our method to prior state-of-the-art.
+                We demonstrate that our algorithm dominates previous methods in terms of resulting CSG compactness and runtime,
+                and can handle far more complex input meshes than any previous method.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Video -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Video</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mf7Xd6oxNrM" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Paper and Code -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Paper and Code</h2>
+            <div><b>InverseCSG: Automatic Conversion of 3D Models to CSG Trees</b></div>
+            <div>
+                <a href="../index.html" class="black">Tao Du</a>,
+                <a href="https://jinala.github.io/" class="black">Jeevana Priya Inala</a>,
+                <a href="https://evanthebouncy.github.io/" class="black">Yewen Pu</a>,
+                <a href="http://www.andrewspielberg.com" class="black">Andrew Spielberg</a>,
+                <a href="https://homes.cs.washington.edu/~adriana/" class="black">Adriana Schulz</a>,
+                <a href="http://danielarus.csail.mit.edu/" class="black">Daniela Rus</a>,
+                <a href="https://people.csail.mit.edu/asolar/" class="black">Armando Solar-Lezama</a>,
+                <a href="https://cdfg.csail.mit.edu/wojciech" class="black">Wojciech Matusik</a>
+            </div>
+            <div><i>ACM Transactions on Graphics (SIGGRAPH Asia 2018)</i></div>
+            <div>
+                <a href="https://dl.acm.org/doi/10.1145/3272127.3275006" class="black_underline">[Paper]</a>
+                <a href="https://dl.acm.org/doi/10.1145/3272127.3275006" class="black_underline">[Code]</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibtex -->
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <h2>Citation</h2>
+            <pre style="background-color: #f6f8fa;">
+@article{du2018_inversecsg,
+    author = {Du, Tao and Inala, Jeevana Priya and Pu, Yewen and Spielberg, Andrew and Schulz, Adriana and Rus, Daniela and Solar-Lezama, Armando and Matusik, Wojciech},
+    title = {InverseCSG: Automatic Conversion of 3D Models to CSG Trees},
+    year = {2018},
+    issue_date = {December 2018},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {37},
+    number = {6},
+    issn = {0730-0301},
+    url = {https://doi.org/10.1145/3272127.3275006},
+    doi = {10.1145/3272127.3275006},
+    journal = {ACM Trans. Graph.},
+    month = {dec},
+    articleno = {213},
+    numpages = {16},
+    keywords = {procedural modeling, CAD, CSG}
+}
+            </pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Footer -->
+    <div class="row pt-0">
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://www.mit.edu" class=footer>Massachusetts Institute of Technology</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="float-left">
+                <a href="https://csail.mit.edu" class=footer>Computer Science and Artificial Intelligence Laboratory</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="float-right">
+                <a href="https://accessibility.mit.edu/" class=footer>Accessibility</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+</body>
+</html>
